@@ -10,6 +10,7 @@
   --blac-color:#000000;
   --hero-color: #C4C4C4;
   --icon-color-fon: #F5F4FA;
+  --icon-color:#AFB1B8;
 }
 
 .list{
@@ -128,6 +129,11 @@ body{
     color: var(--chenj-color);
 }
 
+a:hover .contact-icon,
+a:focus .contact-icon {
+    fill: var(--chenj-color);
+}
+
 .navigation-website a,
 .contact{
     font-weight: 500;
@@ -137,6 +143,16 @@ body{
 
 .navigation-website .current{
     color: var(--chenj-color);
+}
+
+.contact-nav{
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon{
+    fill: var(--text-color);
+    margin-right: 10px;
 }
 
 /* ===== Герой ===== */
@@ -242,35 +258,19 @@ body{
     line-height: 1.71;
 }
 
-.benefits .title::before{
-    content: '';
-    display: block;
-    height: 120px; 
-    background-repeat: no-repeat;
-    background-position: center;
+.benefits-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
     background-color: var(--icon-color-fon);
     margin-bottom: 30px;
 }
 
-.icon-antenna::before{
-    background-image: url(../images/antenna.svg);
-}
-
-.icon-cloc::before{
-    background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before{
-    background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before{
-    background-image: url(../images/astronaut.svg);
-}
-
-
-
-
+/* .benefits-list-icon{
+    width: 70px;
+    height: 70px;
+} */
 
 /* ===== Чим ми займаємся =====  */
 
@@ -328,12 +328,80 @@ body{
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .member{
     background-color: var(--mane-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+}
+
+.member .list{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+} 
+
+.social-list-icon{
+    /* width: 20px;
+    height: 20px; */
+    fill: var(--icon-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus{
+    background-color: var(--chenj-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon{
+    fill: var(--mane-color);
+}
+
+/* ===== Постійні клієнти ===== */
+
+.client-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.client-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+}
+
+.client-icon:hover,
+.client-icon:focus{
+    border: 1px solid var(--chenj-color); 
+}
+
+.client-list-icon{
+    /* width: 106px;
+    height: 60px; */
+    fill: var(--icon-color);
+}
+
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon {
+    fill: var(--chenj-color);
 }
 
 /* ============= Контакти ============= */
@@ -348,6 +416,15 @@ body{
 
 address{
     margin-top: 20px;
+}
+
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+
+.container-addres{
+   margin-right: 70px;
 }
 
 .contact-footer:not(:last-child){
@@ -372,10 +449,39 @@ address {
 }
 
 .addres-site{
+    display: flex;
+    
     background-color: var(--footer-bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    }
+}
+
+.social-footer-title{
+    color: var(--mane-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.social-address-list{
+    display: flex;
+    column-gap: 10px;
+    
+}
+
+.address-icon{
+    background-color: rgba(255, 255, 255, 10%);
+    border-radius: 50%;
+    color: var(--mane-color);
+}
+
+.address-icon .social-list-icon{
+    fill: var(--mane-color);
+}
+
 
  /* ===== Опції портфоліо ===== */
 
