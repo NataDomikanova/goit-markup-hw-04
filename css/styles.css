@@ -129,11 +129,6 @@ body{
     color: var(--chenj-color);
 }
 
-a:hover .contact-icon,
-a:focus .contact-icon {
-    fill: var(--chenj-color);
-}
-
 .navigation-website a,
 .contact{
     font-weight: 500;
@@ -151,7 +146,7 @@ a:focus .contact-icon {
 }
 
 .contact-icon{
-    fill: var(--text-color);
+    fill: currentColor;
     margin-right: 10px;
 }
 
@@ -169,6 +164,7 @@ a:focus .contact-icon {
     background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
     url(../images/hero.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-container{
@@ -267,11 +263,6 @@ a:focus .contact-icon {
     margin-bottom: 30px;
 }
 
-/* .benefits-list-icon{
-    width: 70px;
-    height: 70px;
-} */
-
 /* ===== Чим ми займаємся =====  */
 
 .work{
@@ -350,35 +341,27 @@ a:focus .contact-icon {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--icon-color);
 } 
-
-.social-list-icon{
-    /* width: 20px;
-    height: 20px; */
-    fill: var(--icon-color);
-}
 
 .social-list-link:hover,
 .social-list-link:focus{
     background-color: var(--chenj-color);
+    color: var(--mane-color);
 }
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon{
-    fill: var(--mane-color);
+.social-list-icon {
+    fill: currentColor;
 }
 
 /* ===== Постійні клієнти ===== */
 
 .client-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     column-gap: 30px;
 }
 
-.client-icon{
+.client-list-link{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -386,17 +369,19 @@ a:focus .contact-icon {
     height: 92px;
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+    color: var(--icon-color);
 }
 
-.client-icon:hover,
-.client-icon:focus{
+.client-list-link:hover,
+.client-list-link:focus{
     border: 1px solid var(--chenj-color); 
+    
 }
 
 .client-list-icon{
     /* width: 106px;
     height: 60px; */
-    fill: var(--icon-color);
+    fill: currentColor;
 }
 
 .client-list-link:hover .client-list-icon,
@@ -482,7 +467,6 @@ address {
     fill: var(--mane-color);
 }
 
-
  /* ===== Опції портфоліо ===== */
 
  .project{
@@ -552,8 +536,12 @@ address {
     border-top: none;
 }
 
-.card:hover,
-.card:focus{
+.card-link{
+    display: block;
+}
+
+.card-link:hover,
+.card-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
